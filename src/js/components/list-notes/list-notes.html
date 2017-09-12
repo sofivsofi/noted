@@ -1,0 +1,11 @@
+ <div class="list-group mb-3" style="margin-top:15px;">
+
+	 <div ng-repeat="item in $ctrl.notes track by $index" class="list-group-item list-group-item-action">
+        {{item.name}}
+        <span class="badge badge-info" ng-show="item.category!=null">{{item.category}}</span>
+
+        <delete-btn items="$ctrl.notes" item="item"></delete-btn>
+        <edit-btn items="$ctrl.notes"  item="item"></edit-btn>
+     </div>
+     <div class="list-group-item list-group-item-action" ng-show="$ctrl.notes.length==0">No notes yet :(</div>
+ </div>

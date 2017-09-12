@@ -1,0 +1,10 @@
+<div class="container">	
+	<header class="text-center mt-5 mb-5">
+		<h1 ng-bind="::$ctrl.title"></h1>
+		<h4>{{$ctrl.categories.length || 0 }} items</h4>
+	</header>
+	<form ng-submit="$ctrl.saveCategory($ctrl.newCategory);">
+		<input type="text" class="form-control mb-3" placeholder="Add a category..." ng-model="$ctrl.newCategory"/>
+	</form>	
+	<list-categories categories="$ctrl.categories"></list-categories>
+</div>

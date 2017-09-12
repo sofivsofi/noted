@@ -1,0 +1,9 @@
+ <div class="list-group mb-3">
+
+	 <div ng-repeat="item in $ctrl.categories track by $index" class="list-group-item list-group-item-action">
+        {{item.name}}
+       <delete-btn items="$ctrl.categories" item="item"></delete-btn>
+     </div>
+     <div class="list-group-item list-group-item-action" ng-show="$ctrl.categories.length==0"> No categories yet</div>
+
+ </div>
